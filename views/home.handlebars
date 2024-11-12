@@ -1,10 +1,20 @@
-<h2>Bienvenido al Repositorio de Miembros</h2>
-<p>Este es un listado de todos los miembros registrados en el repositorio.</p>
+<!-- views/home.handlebars -->
 
-<ul>
-  {{#each members}}
-    <li><a href="/members/{{this.id}}">{{this.name}}</a></li>
-  {{else}}
-    <li>No hay miembros registrados.</li>
-  {{/each}}
-</ul>
+<div class="container mt-5">
+    <h1 class="text-center">Miembros del Equipo</h1>
+    <div class="row">
+        {{#each members}} <!-- Iterar sobre los miembros -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.nombre}} {{this.apellido}}</h5>
+                        <p class="card-text"><strong>Titulación:</strong> {{this.titulacion}}</p>
+                        <p class="card-text"><strong>Tecnologías:</strong> {{this.tecnologias}}</p>
+                        <p class="card-text"><strong>Idiomas:</strong> {{this.idiomas}}</p>
+                        <p class="card-text"><strong>Proyectos Personales:</strong> {{this.proyectos_personales}}</p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
