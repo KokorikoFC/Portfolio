@@ -1,20 +1,49 @@
 <!-- views/home.handlebars -->
 
-<div class="container mt-5">
-    <h1 class="text-center">Miembros del Equipo</h1>
-    <div class="row">
-        {{#each members}} <!-- Iterar sobre los miembros -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">{{this.nombre}} {{this.apellido}}</h5>
-                        <p class="card-text"><strong>Titulación:</strong> {{this.titulacion}}</p>
-                        <p class="card-text"><strong>Tecnologías:</strong> {{this.tecnologias}}</p>
-                        <p class="card-text"><strong>Idiomas:</strong> {{this.idiomas}}</p>
-                        <p class="card-text"><strong>Proyectos Personales:</strong> {{this.proyectos_personales}}</p>
-                    </div>
-                </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/home.css">
+</head>
+<body>
+
+    <main>
+        <div class="hero">
+            <h1>Kokoriko Fútbol Club</h1>
+        </div>
+        <div class="aboutUs">
+            <div class="aboutUs_textCont"></div>
+            <img src="" alt="">
+        </div>
+    </main>
+    <section class="services">
+        <h2 class="text-center">¿Qué Ofrecemos?</h2>
+        <p class="text-center">
+            Ofrecemos servicios de desarrollo web, diseño UX/UI, desarrollo backend, y más.
+        </p>
+    </section>
+
+    <section class="team-members">
+        <h2 class="text-center">Miembros del Equipo</h2>
+        <div class="members-list">
+            {{#each members}}
+            <div class="member-card">
+                <h3>{{this.nombre}} {{this.apellido}}</h3>
+                <p><strong>Titulación:</strong> {{this.titulacion}}</p>
+                <p><strong>Tecnologías:</strong> {{this.tecnologias}}</p>
+                <p><strong>Idiomas:</strong> {{this.idiomas}}</p>
+                <p><strong>Proyectos Personales:</strong> {{this.proyectos_personales}}</p>
+                <a href="/miembro/{{this.id}}" class="btn">Ver Detalles</a>
             </div>
-        {{/each}}
-    </div>
-</div>
+            {{/each}}
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="text-center">Contacto: equipo@freelance.com | Teléfono: +123 456 789</p>
+    </footer>
+</body>
+</html>
