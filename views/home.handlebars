@@ -1,0 +1,10 @@
+<h2>Bienvenido al Repositorio de Miembros</h2>
+<p>Este es un listado de todos los miembros registrados en el repositorio.</p>
+
+<ul>
+  {{#each members}}
+    <li><a href="/members/{{this.id}}">{{this.name}}</a></li>
+  {{else}}
+    <li>No hay miembros registrados.</li>
+  {{/each}}
+</ul>
