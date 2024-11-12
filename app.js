@@ -16,7 +16,7 @@ app.set('views', path.join(__dirname, 'views')); // Definimos la carpeta de vist
 app.use(express.json());
 
 // Configura Express para servir archivos estáticos desde la carpeta "public"
-app.use(express.static('public/css'));
+app.use(express.static('public'));
 
 // Conectar a la base de datos usando Sequelize
 sequelize.authenticate()

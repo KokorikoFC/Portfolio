@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="/home.css">
+    <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
 
@@ -15,21 +15,42 @@
             <h1>Kokoriko Fútbol Club</h1>
         </div>
         <div class="aboutUs">
-            <div class="aboutUs_textCont"></div>
-            <img src="" alt="">
+            <div class="aboutUs_textCont">
+                <h2 class="text-center">¿Qué Ofrecemos?</h2>
+                <p class="text-center">
+                    Ofrecemos servicios de desarrollo web, diseño UX/UI, desarrollo backend, y más.
+                </p>
+            </div>
+            <img src="/img/20240423_165105-3-1280x960.webp" alt="">
+        </div>
+        <div class="teamSection">
+            <h2>Nuestro Equipo</h2>
+            <div class="memberListCont">
+                {{#each members}}
+                <a href="/miembro/{{this.id}}" class="memberCardLink">
+                    <div class="memberCard">
+                        <div class="memberCard__photoCont">
+                            <img src="/img/coronel.webp" alt="">
+                        </div>
+                        <div class="memberCard__infoCont">
+                                <h3>{{this.nombre}} {{this.apellido}}</h3>
+                                <p>{{this.titulacion}}</p>
+                            </div>
+                    </div>
+                </a>
+                {{/each}}
+            </div>
         </div>
     </main>
     <section class="services">
-        <h2 class="text-center">¿Qué Ofrecemos?</h2>
-        <p class="text-center">
-            Ofrecemos servicios de desarrollo web, diseño UX/UI, desarrollo backend, y más.
-        </p>
+        
     </section>
 
     <section class="team-members">
         <h2 class="text-center">Miembros del Equipo</h2>
         <div class="members-list">
             {{#each members}}
+            
             <div class="member-card">
                 <h3>{{this.nombre}} {{this.apellido}}</h3>
                 <p><strong>Titulación:</strong> {{this.titulacion}}</p>
