@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del Miembro</title>
+    <link rel="stylesheet" href="/miembro.css"> <!-- Enlace a CSS de la página de miembro -->
+</head>
+<body>
+    <h1>Detalle de {{member.nombre}} {{member.apellido}}</h1>
+    <div class="member-detail">
+        <img src="/images/{{member.foto}}" alt="Foto de {{member.nombre}} {{member.apellido}}">
+        <p><strong>Titulación:</strong> {{member.titulacion}}</p>
+        <p><strong>Tecnologías:</strong> {{member.tecnologias}}</p>
+        <p><strong>Idiomas:</strong> {{member.idiomas}}</p>
+        <p><strong>Proyectos Personales:</strong> {{member.proyectos_personales}}</p>
+    </div>
+    <a href="/">Volver a la lista de miembros</a>
+</body>
+</html>
