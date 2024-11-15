@@ -9,6 +9,7 @@
 main {
     width: 100%;
     min-height: 100vh;
+    margin-bottom: 100px;
 }
 
 .hero {
@@ -37,22 +38,92 @@ main {
     border: 2px solid black;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     gap: 50px;
 }
 .aboutMeCont__img {
-    width: 35%;
+    width: 30%;
     height: 500px;
     background-color: azure;
 }
 .aboutMeCont__textCont {
     width: 40%;
-    height: 300px;
+    height: 100%;
     background-color: beige;
+    padding: 30px;
+}
+.aboutMeCont__textCont h3{
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+.aboutMeCont__textCont p{
+    font-size: 20px;
 }
 
 .proyectSection{
     min-height: 300px;
     width: 100%;
-    background-color: rgb(82, 112, 102);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10% ;
+}
+.proyectSection h3,.tecnologiesSection h3, .studiesSection h3, .idiomSection h3{
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.proyectSection p{
+    font-size: 16px;
+}
+.proyectCont{
+    margin-bottom: 50px;
+    width: 90%;
+    border: 2px solid black;
+    padding: 30px;
+}
+.proyectCont h4{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.proyectCont_textCont{
+    background-color: seashell;
+    padding: 20px;
+}
+.proyectCont_tecnologiesCont{
+    min-height: 50px;
+    background-color: bisque;
+    padding: 20px;
+}
+.proyectCont_tecnologiesCont h5{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.tecnologiesSection{
+    width: 100%;
+    min-height: 200px;
+    background-color: rgb(159, 228, 228);
+    padding: 0 10% ;
+}
+.studiesSection{
+    min-height: 100px;
+    border: 2px solid black;
+    padding: 0 10% ;
+}
+
+.idiomSection{
+    min-height: 100px;
+    background-color: rgb(136, 152, 152);
+}
+.idiomSection__list{
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
 }
