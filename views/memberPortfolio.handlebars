@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Detalle del Miembro</title>
-    <link rel="stylesheet" href="/miembro.css"> <!-- Enlace a CSS de la página de miembro -->
+    <link rel="stylesheet" href="/css/memberPortfolio.css">
 </head>
 <body>
+    <main>
+        <div class="hero">
+            <div class="hero_introduction">
+                <h2>Hola, soy</h2>
+                <h1>{{member.nombre}} {{member.apellido}}</h1>
+            </div>
+            <p class="hero_titulation">{{member.titulacion}}</p>
+        </div>
+        <div class="aboutMeCont">
+            <div class="aboutMeCont__img">
+                <img src="/images/{{member.foto}}" alt="Foto de {{member.nombre}} {{member.apellido}}">
+            </div>
+            <div class="aboutMeCont__textCont">
+                <h3>Sobre Mí</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officiis accusamus incidunt laboriosam ducimus vitae veniam exercitationem, minima ab ad nisi velit, blanditiis fugiat officia reiciendis, atque accusantium perspiciatis quo.</p>
+            </div>
+            
+        </div>
+        <div class="proyectSection"></div>
+    </main>
+    <!--
     <h1>Detalle de {{member.nombre}} {{member.apellido}}</h1>
     <div class="member-detail">
         <img src="/images/{{member.foto}}" alt="Foto de {{member.nombre}} {{member.apellido}}">
@@ -15,5 +36,6 @@
         <p><strong>Proyectos Personales:</strong> {{member.proyectos_personales}}</p>
     </div>
     <a href="/">Volver a la lista de miembros</a>
+    -->
 </body>
 </html>
