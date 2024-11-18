@@ -25,27 +25,29 @@ sequelize.authenticate()
   });
 
   
-// Ruta principal para mostrar todos los miembros y proyectos en la página principal
 app.get('/', async (req, res) => {
   try {
-    // Obtener todos los miembros y proyectos desde la base de datos
-    const members = await Member.findAll();
-    const projects = await Project.findAll();
+    const members = await Member.findAll(); 
+    const projects = await Project.findAll({
+      include: {
+        model: Member, 
+        through: { attributes: [] }  
+      }
+    });
 
     const plainMembers = members.map(member => member.get({ plain: true }));
-    const plainProjects = projects.map(projects => projects.get({ plain: true }));
+    const plainProjects = projects.map(project => project.get({ plain: true }));
 
-    // Verifica en la terminal los datos recuperados
     console.log("Miembros enviados al cliente:", plainMembers);
     console.log("Proyectos enviados al cliente:", plainProjects);
 
-    // Renderizar la vista 'home' y pasar miembros y proyectos
     res.render('home', { members: plainMembers, projects: plainProjects });
   } catch (error) {
     console.error('Error al obtener datos:', error);
     res.status(500).send('Error al obtener datos');
   }
 });
+
 
 
 
@@ -61,7 +63,6 @@ app.get('/memberPortfolio/:id', async (req, res) => {
       // Si el miembro existe, renderiza la vista 'memberPortfolio' y pasa los datos del miembro
       res.render('memberPortfolio', { member: member.get({ plain: true }) });
     } else {
-      // Si no se encuentra el miembro, envía un error 404
       res.status(404).send('Miembro no encontrado');
     }
   } catch (error) {
@@ -71,7 +72,7 @@ app.get('/memberPortfolio/:id', async (req, res) => {
 });
 
 // Sincronizar la base de datos y las tablas
-sequelize.sync({ force: false }) // Usar `force: true` solo si deseas reiniciar las tablas (Cuidado)
+sequelize.sync({ force: false })
   .then(() => {
     console.log('Tablas sincronizadas correctamente');
   })

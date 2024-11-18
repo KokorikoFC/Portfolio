@@ -1,7 +1,7 @@
-// models/Member.js
+
 const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = require('../config/db');
-const Project = require('./Project');  
+
 
 const Member = sequelize.define('Member', {
   id: {
@@ -40,7 +40,6 @@ const Member = sequelize.define('Member', {
   timestamps: true,
 });
 
-Member.belongsToMany(Project, { through: 'member_proyectos' });
 
 
 module.exports = Member;
