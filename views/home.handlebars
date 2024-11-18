@@ -42,20 +42,25 @@
             </div>
         </div>
         <div class="teamProjectsSection">
-            <h2>Proyectos</h2>
+            <h2>Proyectos del grupo</h2>
             <div class="projectListCont">
                 {{#each projects}}
-                <a href="/project/{{this.id}}" class="projectCardLink">
                     <div class="projectCard">
-                        <div class="projectCard__photoCont">
-                            <img src="/img/20240423_165105-3-1280x960.webp" alt="">
-                        </div>
-                        <div class="projectCard__infoCont">
-                            <h3>{{this.nombre}}</h3>
+                        <div class="projectCardTitleCont">
+                            <h3>{{this.titulo}}</h3>
                             <p>{{this.descripcion}}</p>
                         </div>
+                        <div class="projectCardTecnologyCont">
+                            <h4>Tecnologías</h4>
+                            <p>{{this.tecnologias}}</p>
+                        </div>
+                        <div class="projectCardMembersCont">
+                            <h4>Integrantes</h4>
+                            
+                        </div>
+                        <p>Empresa: {{this.empresa}}</p>
                     </div>
-                </a>
+                
                 {{/each}}
             </div>
         </div>

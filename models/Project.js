@@ -29,8 +29,8 @@ const Project = sequelize.define('Project', {
     type: DataTypes.STRING,
   },
 }, {
-  tableName: 'Projects',
-  timestamps: true,
+  tableName: 'proyectos',
+  timestamps: false,
 });
 
 module.exports = Project;
