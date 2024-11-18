@@ -25,7 +25,7 @@ sequelize.authenticate()
   });
 
   
-// Ruta principal para mostrar todos los miembros en la página principal
+// Ruta principal para mostrar todos los miembros y proyectos en la página principal
 app.get('/', async (req, res) => {
   try {
     // Obtener todos los miembros y proyectos desde la base de datos

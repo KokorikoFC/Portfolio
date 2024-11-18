@@ -40,8 +40,7 @@ const Member = sequelize.define('Member', {
   timestamps: true,
 });
 
-// Relación de muchos a muchos entre Miembros y Proyectos
 Member.belongsToMany(Project, { through: 'member_proyectos' });
-Project.belongsToMany(Member, { through: 'member_proyectos' });
+
 
 module.exports = Member;

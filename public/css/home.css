@@ -1,3 +1,10 @@
+:root{
+    --blue: #8dd5ec;
+    --lightBlue: #eaf4f5;
+    --yellow: #f5d50f;
+    --lightYellow: #fefacd;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -11,7 +18,7 @@ main{
 .hero{
     width: 100%;
     height: 50vh;
-    background-color: rgb(120, 160, 207);
+    background-color: var(--blue);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,47 +27,43 @@ main{
     height: 50vh;
     width: 100vw;
     padding: 0 5%;  
-    background-color: rosybrown;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 .aboutUs_textCont{
-    border: 2px solid black;
     width: 40%;
     height: 100%;
+    background-color: var(--lightYellow);
 }
 .aboutUs img{
     width: 40%;
     height: 100%;
     object-fit: cover;
-    background-color: rgb(88, 142, 142);
 }
 .teamSection{
     width: 100vw;
     min-height: 300px;
-    border: 2px solid black;
     
 }
 .memberListCont{
     width: 100%;
     height: 300px;
-    background-color: rgb(168, 168, 168);
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 .memberCardLink{
-    width: 10%;
+    width: 180px;
     height: 100%;
     text-decoration: none;
-    color: black;
-
 }
 .memberCard{
     width: 100%;
     height: 100%;
-    border: 2px solid black;
+    background-color: var(--lightBlue);
+    border-radius: 10px;
+    overflow: hidden;
 }
 .memberCard__photoCont{
     width: 100%;
@@ -74,5 +77,34 @@ main{
 .memberCard__infoCont{
     height: 20%;
     width: 100%;
-    background-color: antiquewhite;
+    text-align: center;
+    color: black;
+}
+
+.teamProjectsSection{
+    width: 100%;
+    min-height: 200px;
+    background-color: var(--lightYellow);
+}
+.projectListCont a{
+    text-decoration: none;
+    color: black;
+}
+.projectCard{
+    width: 70%;
+    margin: auto;
+    background-color: var(--blue);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.projectCardTitleCont p{
+    background-color: white;
+}
+.projectCardTecnologyCont {
+    background-color: white;
+    margin-top: 20px;
+}
+.projectCardMembersCont{
+    background-color: white;
+    margin-top: 20px;
 }

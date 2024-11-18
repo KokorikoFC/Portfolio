@@ -45,22 +45,27 @@
             <h2>Proyectos del grupo</h2>
             <div class="projectListCont">
                 {{#each projects}}
-                    <div class="projectCard">
-                        <div class="projectCardTitleCont">
-                            <h3>{{this.titulo}}</h3>
-                            <p>{{this.descripcion}}</p>
+                    <a href="">
+                        <div class="projectCard">
+                            <div class="projectCardTitleCont">
+                                <h3>{{this.titulo}}</h3>
+                                <p>{{this.descripcion}}</p>
+                            </div>
+                            <div class="projectCardTecnologyCont">
+                                <h4>Tecnologías</h4>
+                                <p>{{this.tecnologias}}</p>
+                            </div>
+                            <div class="projectCardMembersCont">
+                                <h4>Integrantes</h4>
+                                <ul>
+                                    {{#each this.members}}
+                                    <li>{{this.nombre}} {{this.apellido}}</li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                            <p>Empresa: {{this.empresa}}</p>
                         </div>
-                        <div class="projectCardTecnologyCont">
-                            <h4>Tecnologías</h4>
-                            <p>{{this.tecnologias}}</p>
-                        </div>
-                        <div class="projectCardMembersCont">
-                            <h4>Integrantes</h4>
-                            
-                        </div>
-                        <p>Empresa: {{this.empresa}}</p>
-                    </div>
-                
+                    </a>
                 {{/each}}
             </div>
         </div>
