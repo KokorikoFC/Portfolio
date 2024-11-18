@@ -1,23 +1,21 @@
 const express = require('express');
 const path = require('path');
 const { engine } = require('express-handlebars');
-const sequelize = require('./config/db'); // Conexión a la base de datos
-const Member = require('./models/Member'); // El modelo de Miembro
+const sequelize = require('./config/db');
+const Member = require('./models/Member'); 
+const Project = require('./models/Project'); 
 
 const app = express();
 
 // Configuración de Handlebars como motor de plantillas
 app.engine('handlebars', engine({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
-app.set('views', path.join(__dirname, 'views')); // Definimos la carpeta de vistas
+app.set('views', path.join(__dirname, 'views')); 
 
-// Middleware para JSON (si necesitas procesar JSON)
 app.use(express.json());
 
-// Configura Express para servir archivos estáticos desde la carpeta "public"
 app.use(express.static('public'));
 
-// Conectar a la base de datos usando Sequelize
 sequelize.authenticate()
   .then(() => {
     console.log('Conexión a la base de datos establecida correctamente');
@@ -30,20 +28,26 @@ sequelize.authenticate()
 // Ruta principal para mostrar todos los miembros en la página principal
 app.get('/', async (req, res) => {
   try {
-    // Obtener todos los miembros desde la base de datos
+    // Obtener todos los miembros y proyectos desde la base de datos
     const members = await Member.findAll();
+    const projects = await Project.findAll();
+
     const plainMembers = members.map(member => member.get({ plain: true }));
+    const plainProjects = projects.map(projects => projects.get({ plain: true }));
 
-    // Verifica en la terminal que los miembros están siendo recuperados correctamente
-    console.log("Miembros enviados al cliente:", plainMembers); // Verificar los datos
+    // Verifica en la terminal los datos recuperados
+    console.log("Miembros enviados al cliente:", plainMembers);
+    console.log("Proyectos enviados al cliente:", plainProjects);
 
-    // Renderizar la vista 'home' y pasar los miembros
-    res.render('home', { members: plainMembers });
+    // Renderizar la vista 'home' y pasar miembros y proyectos
+    res.render('home', { members: plainMembers, projects: plainProjects });
   } catch (error) {
-    console.error('Error al obtener miembros:', error);
-    res.status(500).send('Error al obtener los miembros');
+    console.error('Error al obtener datos:', error);
+    res.status(500).send('Error al obtener datos');
   }
 });
+
+
 
 app.get('/memberPortfolio/:id', async (req, res) => {
   try {

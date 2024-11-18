@@ -41,27 +41,27 @@
                 {{/each}}
             </div>
         </div>
-    </main>
-    <section class="services">
-        
-    </section>
-
-    <section class="team-members">
-        <h2 class="text-center">Miembros del Equipo</h2>
-        <div class="members-list">
-            {{#each members}}
-            
-            <div class="member-card">
-                <h3>{{this.nombre}} {{this.apellido}}</h3>
-                <p><strong>Titulación:</strong> {{this.titulacion}}</p>
-                <p><strong>Tecnologías:</strong> {{this.tecnologias}}</p>
-                <p><strong>Idiomas:</strong> {{this.idiomas}}</p>
-                <p><strong>Proyectos Personales:</strong> {{this.proyectos_personales}}</p>
-                <a href="/miembro/{{this.id}}" class="btn">Ver Detalles</a>
+        <div class="teamProjectsSection">
+            <h2>Proyectos</h2>
+            <div class="projectListCont">
+                {{#each projects}}
+                <a href="/project/{{this.id}}" class="projectCardLink">
+                    <div class="projectCard">
+                        <div class="projectCard__photoCont">
+                            <img src="/img/20240423_165105-3-1280x960.webp" alt="">
+                        </div>
+                        <div class="projectCard__infoCont">
+                            <h3>{{this.nombre}}</h3>
+                            <p>{{this.descripcion}}</p>
+                        </div>
+                    </div>
+                </a>
+                {{/each}}
             </div>
-            {{/each}}
         </div>
-    </section>
+    </main>
+
+
 
     <footer class="footer">
         <p class="text-center">Contacto: equipo@freelance.com | Teléfono: +123 456 789</p>
