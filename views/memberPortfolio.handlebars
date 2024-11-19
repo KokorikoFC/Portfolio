@@ -16,33 +16,66 @@
         </div>
         <div class="aboutMeCont">
             <div class="aboutMeCont__img">
-                <img src="/images/{{member.foto}}" alt="Foto de {{member.nombre}} {{member.apellido}}">
+                <img src="{{member.foto}}" alt="Foto de {{member.nombre}} {{member.apellido}}">
             </div>
             <div class="aboutMeCont__textCont">
                 <h3>Sobre Mí</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officiis accusamus incidunt laboriosam ducimus vitae veniam exercitationem, minima ab ad nisi velit, blanditiis fugiat officia reiciendis, atque accusantium perspiciatis quo.</p>
+                <p>{{member.presentacion}}</p>
             </div>
             
         </div>
-        <div class="proyectSection">
-            <h3>Proyectos</h3>
-            <div class="proyectCont">
-                <h4>Titulo proyecto</h4>
-            <div class="proyectCont_textCont">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque officiis, dignissimos, laboriosam odio assumenda adipisci dicta voluptate eum id blanditiis iure nulla eius ad quidem sequi, consequatur a! Libero, quidem?</p>
+        <div class="teamProjectsSection">
+            <h2 class="teamProjectsSection__title">NUESTROS TRABAJOS</h2>
+            <hr>
+            <p class="teamProjectsSection__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odio quis nulla animi blanditiis, suscipit optio, impedit quod delectus at praesentium vitae culpa dolorem natus mollitia tenetur enim. Natus, voluptas?</p>
+            <div class="projectListCont">
+                {{#each projects}}
+                    <a href="">
+                        <div class="projectCard">
+                            <div class="projectCardTitleCont">
+                                <h3>{{this.titulo}}</h3>
+                                <p>{{this.descripcion}}</p>
+                            </div>
+                            <div class="projectCardTecnologyCont">
+                                <h4>Tecnologías</h4>
+                                <div class="projectTecnologyList">
+                                    {{#each this.tecnologias}}
+                                        <div class="projectTecnologyCard">
+                                            <img src="{{this.image}}" alt="{{this.name}}" class="technologyImage" />
+                                            <p>{{this.name}}</p>
+                                        </div>
+                                    {{/each}}
+                                </div>
+                            </div>
+                            <div class="projectCardMembersCont">
+                                <h4>Integrantes</h4>
+                                <div class="projectMemberList">
+                                    {{#each this.Members}} 
+                                    <div class="projectMemberCard">
+                                        <img src={{this.foto}} alt="">
+                                        <p>{{this.nombre}} {{this.apellido}}</p>
+                                    </div>
+                                        
+                                    {{/each}}
+                                </div>
+                            </div>
+                            <p>Empresa: {{this.empresa}}</p>
+                        </div>
+                    </a>
+                {{/each}}
             </div>
-            <div class="proyectCont_tecnologiesCont">
-                <h5>Tecnologías utilizadas</h5>
-                <p>{{member.tecnologias}}</p>
-            </div>
-            <p>Empresa: <span>Nebrija</span></p>
-            <p>Visitar en: <a href="">https://github.com/KokoritoFC/Portfolio</a></p>
-            </div>
-            
         </div>
         <div class="tecnologiesSection">
             <h3>Tecnologías:</h3>
-            <p>{{member.tecnologias}}</p>
+            <div class="tecnologiesSectionList">
+                {{#each member.tecnologias}}
+                    <div class="tecnologiesSectionCard">
+                        <img src="{{this.image}}" alt="{{this.name}}" class="technologyImage">
+                        <p>{{this.name}}</p>
+                    </div>
+                {{/each}}
+            </div>
+
         </div>
         <div class="studiesSection">
             <h3>Estudios</h3>

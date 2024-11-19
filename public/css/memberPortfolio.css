@@ -1,3 +1,11 @@
+:root{
+    --Black: #121212;
+    --White: #d4d0c9;
+    --Turquese: #25beae;
+    --Blue: #2735a9;
+    --Gray: #262626;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -10,6 +18,8 @@ main {
     width: 100%;
     min-height: 100vh;
     margin-bottom: 100px;
+    background-color: var(--Black);
+    color: white;
 }
 
 .hero {
@@ -46,10 +56,15 @@ main {
     height: 500px;
     background-color: azure;
 }
+.aboutMeCont__img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 .aboutMeCont__textCont {
     width: 40%;
     height: 100%;
-    background-color: beige;
+    background-color: rgb(53, 53, 35);
     padding: 30px;
 }
 .aboutMeCont__textCont h3{
@@ -60,61 +75,103 @@ main {
     font-size: 20px;
 }
 
-.proyectSection{
-    min-height: 300px;
+.teamProjectsSection{
     width: 100%;
+    min-height: 200px;
+    background-color: var(--lightYellow);
+}
+.projectListCont a{
+    text-decoration: none;
+    color: white;
+}
+.projectCard{
+    width: 70%;
+    margin: auto;
+    background-color: var(--blue);
+    padding: 30px;
+    margin-bottom: 20px;
+    background-color: var(--Gray);
+    border-radius: 20px;
+}
+.projectCardTitleCont h3{
+    color: white;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+.projectCard h4{
+    color: var(--Turquese);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.projectCardTitleCont p{
+    color: white;
+    font-size: 20px;
+}
+.projectCardTecnologyCont {
+    margin-top: 20px;
+}
+.projectTecnologyCard{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 10% ;
 }
-.proyectSection h3,.tecnologiesSection h3, .studiesSection h3, .idiomSection h3{
-    width: 100%;
-    text-align: left;
-    padding: 10px;
-    font-size: 30px;
-    margin-bottom: 30px;
+.projectCard img{
+    height: 70px;
 }
-.proyectSection p{
-    font-size: 16px;
+.projectCardMembersCont{
+    margin-top: 20px;
 }
-.proyectCont{
-    margin-bottom: 50px;
-    width: 90%;
-    border: 2px solid black;
-    padding: 30px;
+.projectMemberList,.projectTecnologyList{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    overflow: hidden;
 }
-.proyectCont h4{
-    font-size: 24px;
-    margin-bottom: 20px;
+.projectMemberCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.proyectCont_textCont{
-    background-color: seashell;
-    padding: 20px;
+.projectMemberCard img{
+    height: 100px;
+    border-radius: 80%;
 }
-.proyectCont_tecnologiesCont{
-    min-height: 50px;
-    background-color: bisque;
-    padding: 20px;
-}
-.proyectCont_tecnologiesCont h5{
+.projectMemberCard p{
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
+/*----------------TECNOLOGÍAS--------------------*/
 .tecnologiesSection{
     width: 100%;
     min-height: 200px;
-    background-color: rgb(159, 228, 228);
     padding: 0 10% ;
+    background-color: #262626;
 }
+.tecnologiesSectionList{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+.tecnologiesSectionCard{
+}
+.tecnologiesSectionCard img{
+    height: 150px;
+    object-fit: cover;
+}
+/*----------------ESTUDIOS--------------------*/
 .studiesSection{
     min-height: 100px;
     border: 2px solid black;
     padding: 0 10% ;
 }
 
+/*----------------IDIOMAS--------------------*/
 .idiomSection{
     min-height: 100px;
     background-color: rgb(136, 152, 152);

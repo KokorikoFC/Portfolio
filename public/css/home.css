@@ -1,8 +1,9 @@
 :root{
-    --blue: #8dd5ec;
-    --lightBlue: #eaf4f5;
-    --yellow: #f5d50f;
-    --lightYellow: #fefacd;
+    --Black: #121212;
+    --White: #d4d0c9;
+    --Turquese: #25beae;
+    --Blue: #2735a9;
+    --Gray: #262626;
 }
 
 *{
@@ -14,73 +15,130 @@
 main{
     width: 100%;
     min-height: 100vh;
+    overflow: hidden;
+    background-color: var(--Black);
+    color: white;
 }
 .hero{
     width: 100%;
-    height: 50vh;
-    background-color: var(--blue);
+    height: 100vh;
+    background-color: var(--Blue);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .aboutUs{
-    height: 50vh;
+    margin: 100px 0;
+    min-height: 50vh;
     width: 100vw;
     padding: 0 5%;  
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 5%;
 }
 .aboutUs_textCont{
-    width: 40%;
-    height: 100%;
-    background-color: var(--lightYellow);
+    width: 45%;
+    height: auto;
+    padding: 4%;
+    text-wrap:balance;
+    font-size: 20px;
+    border: 2px solid var(--Turquese);
+}
+
+.aboutUs_textCont h2{
+    margin-bottom: 30px;
 }
 .aboutUs img{
-    width: 40%;
-    height: 100%;
+    width: 45%;
     object-fit: cover;
+    border-radius: 20px;
 }
 .teamSection{
     width: 100vw;
     min-height: 300px;
-    
+    margin-bottom: 150px;
+}
+.teamSection_title,.teamProjectsSection__title{
+    text-align: center;
+    font-size: 34px;
+    color: white;
+}
+.teamSection__subtitle, .teamProjectsSection__subtitle{
+    text-align: center;
+    font-size: 22px;
+    color: white;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 100px;
+}
+.teamSection hr, .teamProjectsSection hr{
+    width: 20%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 2px solid var(--Turquese);
+    border-radius: 5px;
 }
 .memberListCont{
     width: 100%;
-    height: 300px;
+    height: auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    gap: 30px;
 }
 .memberCardLink{
-    width: 180px;
+    width: 40%;
     height: 100%;
     text-decoration: none;
 }
 .memberCard{
     width: 100%;
-    height: 100%;
-    background-color: var(--lightBlue);
+    height: 200px;
+    background-color: var(--Gray);
     border-radius: 10px;
     overflow: hidden;
+    display: flex;
 }
 .memberCard__photoCont{
-    width: 100%;
+    width: 60%;
     overflow: hidden;
-    height: 80%;
+    height: 100%;
 }
 .memberCard__photoCont img{
     height: 100%;
+    width: 100%;
     object-fit: cover;
+
 }
 .memberCard__infoCont{
     height: 20%;
-    width: 100%;
+    width: 70%;
     text-align: center;
-    color: black;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: left;
+}
+.memberCard__infoCont h3{
+    font-size: 26px;
+}
+.memberCard__infoCont--title{
+    color: var(--Turquese);
+    margin: 10px 0 20px 0;
+}
+.memberCard__infoCont--presentation{
+    white-space: nowrap;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
+
+/*----------------------PROYECTOS----------------------*/
 .teamProjectsSection{
     width: 100%;
     min-height: 200px;
@@ -88,29 +146,67 @@ main{
 }
 .projectListCont a{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 .projectCard{
     width: 70%;
     margin: auto;
     background-color: var(--blue);
-    padding: 20px;
+    padding: 30px;
     margin-bottom: 20px;
+    background-color: var(--Gray);
+    border-radius: 20px;
+}
+.projectCardTitleCont h3{
+    color: white;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+.projectCard h4{
+    color: var(--Turquese);
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 .projectCardTitleCont p{
-    background-color: white;
+    color: white;
+    font-size: 20px;
 }
 .projectCardTecnologyCont {
-    background-color: white;
     margin-top: 20px;
+}
+.projectTecnologyCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.projectCard img{
+    height: 70px;
 }
 .projectCardMembersCont{
-    background-color: white;
     margin-top: 20px;
 }
-.projectCardMembersCont ul{
+.projectMemberList,.projectTecnologyList{
     display: flex;
     justify-content: space-around;
     align-items: center;
     list-style: none;
+    overflow: hidden;
+}
+.projectMemberCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.projectMemberCard img{
+    height: 100px;
+    border-radius: 80%;
+}
+.projectMemberCard p{
+    font-size: 18px;
+    margin-top: 10px;
+}
+.footer{
+    background-color: var(--blue);
 }
