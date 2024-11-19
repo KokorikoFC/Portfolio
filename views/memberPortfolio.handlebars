@@ -47,18 +47,6 @@
                                     {{/each}}
                                 </div>
                             </div>
-                            <div class="projectCardMembersCont">
-                                <h4>Integrantes</h4>
-                                <div class="projectMemberList">
-                                    {{#each this.Members}} 
-                                    <div class="projectMemberCard">
-                                        <img src={{this.foto}} alt="">
-                                        <p>{{this.nombre}} {{this.apellido}}</p>
-                                    </div>
-                                        
-                                    {{/each}}
-                                </div>
-                            </div>
                             <p>Empresa: {{this.empresa}}</p>
                         </div>
                     </a>
@@ -79,13 +67,12 @@
         </div>
         <div class="studiesSection">
             <h3>Estudios</h3>
-            <p>Nebrija</p>
+            <p>{{member.estudios}}</p>
         </div>
         <div class="idiomSection">
             <h3>Idiomas</h3>
             <div class="idiomSection__list">
-                <p>Inglés</p>
-                <p>Español</p>
+                <p>{{member.idiomas}}</p>
             </div>
             
         </div>

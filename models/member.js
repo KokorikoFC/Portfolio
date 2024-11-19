@@ -29,6 +29,9 @@ const Member = sequelize.define('Member', {
   tecnologias: {
     type: DataTypes.TEXT,
   },
+  estudios: {
+    type: DataTypes.TEXT,
+  },
   idiomas: {
     type: DataTypes.STRING,
   },
