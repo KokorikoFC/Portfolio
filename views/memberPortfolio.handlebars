@@ -25,7 +25,7 @@
             
         </div>
         <div class="teamProjectsSection">
-            <h2 class="teamProjectsSection__title">NUESTROS TRABAJOS</h2>
+            <h2 class="teamProjectsSection__title">MIS TRABAJOS</h2>
             <hr>
             <p class="teamProjectsSection__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odio quis nulla animi blanditiis, suscipit optio, impedit quod delectus at praesentium vitae culpa dolorem natus mollitia tenetur enim. Natus, voluptas?</p>
             <div class="projectListCont">
@@ -34,6 +34,7 @@
                         <div class="projectCard">
                             <div class="projectCardTitleCont">
                                 <h3>{{this.titulo}}</h3>
+                                <hr>
                                 <p>{{this.descripcion}}</p>
                             </div>
                             <div class="projectCardTecnologyCont">
@@ -54,7 +55,8 @@
             </div>
         </div>
         <div class="tecnologiesSection">
-            <h3>Tecnologías:</h3>
+            <h2 class="tecnologiesSection__title">TECNOLOGÍAS</h2>
+            <hr>
             <div class="tecnologiesSectionList">
                 {{#each member.tecnologias}}
                     <div class="tecnologiesSectionCard">
@@ -66,11 +68,13 @@
 
         </div>
         <div class="studiesSection">
-            <h3>Estudios</h3>
+            <h2 class="studiesSection__title">ESTUDIOS</h2>
+            <hr>
             <p>{{member.estudios}}</p>
         </div>
         <div class="idiomSection">
-            <h3>Idiomas</h3>
+            <h2 class="idiomSection_title">IDIOMAS</h2>
+            <hr>
             <div class="idiomSection__list">
                 <p>{{member.idiomas}}</p>
             </div>

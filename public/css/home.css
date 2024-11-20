@@ -152,7 +152,6 @@ main{
 .projectCard{
     width: 70%;
     margin: auto;
-    background-color: var(--blue);
     padding: 30px;
     margin-bottom: 20px;
     background-color: var(--Gray);
@@ -166,11 +165,15 @@ main{
 .projectCard h4{
     color: var(--Turquese);
     font-size: 22px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .projectCardTitleCont p{
     color: white;
-    font-size: 20px;
+    font-size: 18px;
+}
+.projectCardTitleCont hr{
+    width: 100%;
+    border: 1px solid var(--Turquese);
 }
 .projectCardTecnologyCont {
     margin-top: 20px;

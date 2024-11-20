@@ -27,7 +27,7 @@ sequelize
 const techImages = {
     JavaScript: "/img/Javascript.webp",
     "Node.js": "/img/node.png",
-    React: "/img/coronel.webp",
+    Kotlin: "/img/kotlin.png",
     Python: "/img/coronel.webp",
     HTML: "/img/html.png",
     CSS: "/img/css.png",
@@ -38,6 +38,7 @@ const techImages = {
     Firebase:"/img/Firebase.png",
     Unity:"/img/unity.png",
     Godot:"/img/godot.png",
+    Svelte:"/img/Svelte.png",
 };
 
 /* Ruta para obtener los datos de todos los miembros y proyectos grupales*/
