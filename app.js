@@ -34,6 +34,10 @@ const techImages = {
     PHP: "/img/php.png",
     MySQL: "/img/mysql.png",
     Java: "/img/java.png",
+    Bootstrap:"/img/Bootstrap.png",
+    Firebase:"/img/Firebase.png",
+    Unity:"/img/unity.png",
+    Godot:"/img/godot.png",
 };
 
 /* Ruta para obtener los datos de todos los miembros y proyectos grupales*/

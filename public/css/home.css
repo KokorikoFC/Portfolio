@@ -129,6 +129,7 @@ main{
 .memberCard__infoCont--title{
     color: var(--Turquese);
     margin: 10px 0 20px 0;
+    font-size: 16px;
 }
 .memberCard__infoCont--presentation{
     white-space: nowrap;
