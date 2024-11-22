@@ -18,6 +18,8 @@ main{
     overflow: hidden;
     background-color: var(--Black);
     color: white;
+    text-align: justify;
+    line-height: 1.5;
 }
 .hero{
     width: 100%;
@@ -149,6 +151,7 @@ main{
     width: 100%;
     min-height: 200px;
     background-color: var(--lightYellow);
+
 }
 .projectListCont a{
     text-decoration: none;
@@ -174,7 +177,7 @@ main{
 }
 .projectCardTitleCont p{
     color: white;
-    font-size: 18px;
+    font-size: 20px;
 }
 .projectCardTitleCont hr{
     width: 100%;

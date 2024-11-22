@@ -20,6 +20,8 @@ main {
     padding-bottom: 100px;
     background-color: var(--Black);
     color: white;
+    text-align: justify;
+    line-height: 1.5;
 }
 
 .aboutMeCont,.teamProjectsSection,.tecnologiesSection,.studiesSection,.idiomSection{
@@ -139,7 +141,7 @@ main {
 }
 .projectCardTitleCont p{
     color: white;
-    font-size: 18px;
+    font-size: 20px;
 }
 .projectCardTitleCont hr{
     width: 100%;
