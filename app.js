@@ -39,6 +39,9 @@ const techImages = {
     Unity:"/img/unity.png",
     Godot:"/img/godot.png",
     Svelte:"/img/Svelte.png",
+    React:"/img/React.png",
+    Spring:"/img/Spring.png",
+
 };
 
 /* Ruta para obtener los datos de todos los miembros y proyectos grupales*/
@@ -131,7 +134,7 @@ app.get("/memberPortfolio/:id", async (req, res) => {
                     .map((tech) => ({
                         name: tech.trim(),
                         image:
-                            techImages[tech.trim()] || "/img/default-tech.png",
+                            techImages[tech.trim()] || "/img/coronel.webp",
                     }));
             }
 

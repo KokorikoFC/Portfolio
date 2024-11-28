@@ -1,4 +1,7 @@
-:root{
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+:root {
     --Black: #121212;
     --White: #d4d0c9;
     --Turquese: #25beae;
@@ -10,11 +13,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-        sans-serif;
+}
+h3,h2{
+    font-family: "Aldrich", sans-serif;
 }
 main {
+    font-family: "Proza Libre", sans-serif;
     width: 100%;
     min-height: 100vh;
     padding-bottom: 100px;
@@ -22,27 +26,49 @@ main {
     color: white;
     text-align: justify;
     line-height: 1.5;
+    background: linear-gradient(
+        to bottom,
+        #000000 0%,
+        #121212 50%,
+        #121212 100%
+    );
+    background-color: #080808;
+    background-color: #080808;
+    opacity: 1;
+    background-size: 17px 17px;
+    background-image: repeating-linear-gradient(
+        45deg,
+        #0c0c0c 0,
+        #0c0c0c 1.7000000000000002px,
+        #080808 0,
+        #080808 50%
+    );
 }
 
-.aboutMeCont,.teamProjectsSection,.tecnologiesSection,.studiesSection,.idiomSection{
+.aboutMeCont,
+.teamProjectsSection,
+.tecnologiesSection,
+.studiesSection,
+.idiomSection {
     margin-bottom: 150px;
 }
 /*----------------HERO--------------------*/
 .hero {
     width: 100%;
-    height: 55vh;
-    border: 2px solid black;
+    height: 65vh;
     position: relative;
     margin-bottom: 250px;
     padding: 2%;
+    font-family: "Aldrich", sans-serif;
 }
 .hero_introduction {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 40px;
     text-align: center;
+    
 }
 .hero_titulation {
     position: absolute;
@@ -50,6 +76,8 @@ main {
     font-size: 30px;
     font-weight: bold;
     padding: 10px;
+    color: var(--Turquese);
+    font-family: "Proza Libre", sans-serif;
 }
 
 /*----------------SOBRE MÍ--------------------*/
@@ -67,7 +95,7 @@ main {
     border-radius: 15px;
     overflow: hidden;
 }
-.aboutMeCont__img img{
+.aboutMeCont__img img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -78,23 +106,23 @@ main {
     border: 2px solid var(--Turquese);
     padding: 30px;
     border-radius: 15px;
-
 }
-.aboutMeCont__textCont h3{
+.aboutMeCont__textCont h3 {
     font-size: 34px;
     margin-bottom: 30px;
 }
-.aboutMeCont__textCont p{
+.aboutMeCont__textCont p {
     font-size: 20px;
 }
 
 /*----------------PROYECTOS--------------------*/
-.teamProjectsSection__title, .tecnologiesSection__title{
+.teamProjectsSection__title,
+.tecnologiesSection__title {
     text-align: center;
     font-size: 34px;
     color: white;
 }
-.teamProjectsSection__subtitle{
+.teamProjectsSection__subtitle {
     text-align: center;
     font-size: 22px;
     color: white;
@@ -103,7 +131,8 @@ main {
     margin: auto;
     margin-bottom: 100px;
 }
-.teamProjectsSection hr, .tecnologiesSection hr{
+.teamProjectsSection hr,
+.tecnologiesSection hr {
     width: 20%;
     margin: auto;
     margin-top: 30px;
@@ -111,57 +140,57 @@ main {
     border: 2px solid var(--Turquese);
     border-radius: 5px;
 }
-.teamProjectsSection{
+.teamProjectsSection {
     width: 100%;
     min-height: 200px;
     background-color: var(--lightYellow);
 }
-.projectListCont a{
+.projectListCont a {
     text-decoration: none;
     color: white;
 }
-.projectCard{
+.projectCard {
     width: 70%;
     margin: auto;
     background-color: var(--blue);
-    padding: 30px;
+    padding: 50px;
     margin-bottom: 100px;
     background-color: var(--Gray);
     border-radius: 15px;
 }
-.projectCardTitleCont h3{
+.projectCardTitleCont h3 {
     color: white;
     font-size: 26px;
     margin-bottom: 30px;
 }
-.projectCard h4{
+.projectCard h4 {
     color: var(--Turquese);
     font-size: 22px;
     margin-bottom: 10px;
 }
-.projectCardTitleCont p{
+.projectCardTitleCont p {
     color: white;
     font-size: 20px;
 }
-.projectCardTitleCont hr{
+.projectCardTitleCont hr {
     width: 100%;
     border: 1px solid var(--Turquese);
 }
 .projectCardTecnologyCont {
     margin-top: 20px;
 }
-.projectTecnologyCard{
+.projectTecnologyCard {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-bottom: 20px;
 }
-.projectCard img{
+.projectCard img {
     height: 70px;
 }
 
-.projectTecnologyList{
+.projectTecnologyList {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -169,22 +198,24 @@ main {
     overflow: hidden;
 }
 
-.visitURL,.company{
+.visitURL,
+.company {
     font-size: 18px;
     color: var(--Turquese);
     margin-top: 15px;
 }
-.visitURL a,.company span{
+.visitURL a,
+.company span {
     color: white;
     margin-left: 10px;
 }
 /*----------------TECNOLOGÍAS--------------------*/
-.tecnologiesSection{
+.tecnologiesSection {
     width: 100%;
     min-height: 200px;
-    padding: 0 10% ;
+    padding: 0 10%;
 }
-.tecnologiesSectionList{
+.tecnologiesSectionList {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -192,29 +223,31 @@ main {
     gap: 40px;
     padding: 20px;
 }
-.tecnologiesSectionCard{
+.tecnologiesSectionCard {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     min-width: 20%;
 }
-.tecnologiesSectionCard img{
+.tecnologiesSectionCard img {
     height: 110px;
     object-fit: cover;
 }
 
-
 /*----------------ESTUDIOS e IDIOMAS--------------------*/
-.studiesSection, .idiomSection{
+.studiesSection,
+.idiomSection {
     min-height: 100px;
-    padding: 0 10% ;
+    padding: 0 10%;
 }
-.idiomSection_title,.studiesSection__title{
+.idiomSection_title,
+.studiesSection__title {
     text-align: left;
     font-size: 28px;
 }
-.studiesSection hr, .idiomSection hr{
+.studiesSection hr,
+.idiomSection hr {
     width: 100%;
     margin: auto;
     margin-top: 20px;
@@ -223,7 +256,8 @@ main {
     border-radius: 5px;
 }
 
-.idiomSection__list, .studiesSection p{
+.idiomSection__list,
+.studiesSection p {
     display: flex;
     justify-content: center;
     align-items: center;
