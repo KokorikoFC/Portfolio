@@ -293,7 +293,7 @@ main {
     justify-content: center;
     align-items: center;
 }
-.footerLogoCont svg {
+.footerLogoCont img {
     height: 60px;
     width: 60px;
 }
