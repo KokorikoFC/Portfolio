@@ -9,6 +9,28 @@
     --Gray: #262626;
 }
 
+::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+    height: 10px; /* Alto de la barra de desplazamiento (para scroll horizontal) */
+}
+
+/* Estilo del fondo de la barra */
+::-webkit-scrollbar-track {
+    background-color: #121212; /* Color de fondo de la barra */
+}
+
+/* Estilo del "pulgar" o la parte móvil de la barra */
+::-webkit-scrollbar-thumb {
+    background-color: #5cbbae; /* Color del pulgar (parte móvil) */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 2px solid #121212; /* Borde sutil para darle un toque */
+}
+
+/* Estilo cuando el pulgar está siendo presionado (hover) */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ffffff; /* Color más claro cuando el pulgar está activo */
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -68,16 +90,20 @@ main {
     transform: translate(-50%, -50%);
     font-size: 40px;
     text-align: center;
-    
 }
+
 .hero_titulation {
     position: absolute;
+    left: 50%;
+    width: 60%;
+    transform: translateX(-50%);
     bottom: 0;
     font-size: 30px;
     font-weight: bold;
     padding: 10px;
     color: var(--Turquese);
     font-family: "Proza Libre", sans-serif;
+    text-align: center;
 }
 
 /*----------------SOBRE MÍ--------------------*/
